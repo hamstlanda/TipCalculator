@@ -25,10 +25,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
-    @IBAction func keyboardHide(_ sender: Any) {
-        view.endEditing(true)
+    @IBAction func clearBill(_ sender: Any) {
+        reset()
     }
+    
+    
     @IBAction func calculateTip(_ sender: Any) {
         let tipOpt=[0.15, 0.18, 0.2]
         let bill = Double(billField.text!) ?? 0
@@ -39,5 +40,14 @@ class ViewController: UIViewController {
         totalLabel.text = String(format: "$%.2f", total)
         
     }
+    func reset (){
+         billField.text = ""
+         tipControl.selectedSegmentIndex = 0
+         tipLabel.text = "$0.00"
+         totalLabel.text = "$0.00"
+    }
+    
+    
+    
 }
 

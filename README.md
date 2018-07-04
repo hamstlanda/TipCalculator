@@ -2,7 +2,8 @@
 
 Submitted by: Liza Liutova
 
-Time spent: 7 hours spent in total
+Time spent: 5 hours spent in total
+
 ##User Stories
 
 The following required functionality is complete:
@@ -24,9 +25,11 @@ Here's a walkthrough of implemented user stories:
 <img src='blob:https://imgur.com/06a936e2-fdd3-445c-99a6-ff7f96c0e444' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
 ##Notes
 
 Describe any challenges encountered while building the app.
+
 ##License
 
 Copyright 2018 Liza Liutova

@@ -28,7 +28,7 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ##Notes
 
-Describe any challenges encountered while building the app.
+While building the app I really got a chance to get familiar with the iOS framework. I encountered most challenges when trying to implement the optional feature. I added another View Controller and had to learn how to pass data between different view controllers.   
 
 ##License
 

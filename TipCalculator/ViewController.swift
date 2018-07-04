@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  TipCalculator
+
 //
 //  Created by Liza on 6/16/18.
 //  Copyright © 2018 Liza. All rights reserved.
@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     var bill = 0.0
     var tip = 0.0
     var total = 0.0
-    var billHistory:Array<Double>=[0]
+    public var billHistory:Array<Array<Double>>=[[]]
     let tipOpt=[0.15, 0.18, 0.2]
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var billField: UITextField!
@@ -23,15 +23,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var historyTip: UILabel!
     @IBOutlet weak var historyTotal: UILabel!
     
-    
-//    @IBOutlet weak var historyPercentage: UILabel!
-//    @IBOutlet weak var historyTip: UILabel!
-//    @IBOutlet weak var historyTotal: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         billField.becomeFirstResponder()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,8 +35,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func clearBill(_ sender: Any) {
-        let bill = Double(billField.text!) ?? 0
-        billHistory.append(bill)
+        let currentVal = getCurrent()
+        billHistory.append(currentVal)
         reset()
     }
     
@@ -61,18 +56,24 @@ class ViewController: UIViewController {
          tipLabel.text = "$0.00"
          totalLabel.text = "$0.00"
     }
-    
-    @IBAction func HistoryPressed(_ sender: Any) {
-        view.endEditing(true)
-//        let bh = "test"
-//        billField.text? = bh
-        for element in billHistory{
-//            let elementHistory = element
-//            historyBill.text = String(element)
-            print(element)
-        }
+    func getCurrent() -> Array<Double> {
+        let currentInfo = [bill, tip, total]
+        return currentInfo
     }
     
     
+    @IBAction func HistoryPressed(_ sender: Any) {
+        
+        view.endEditing(true)
+        for element in billHistory{
+            print(element)
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toHistoryViewControllerSegue"{
+            let hist = segue.destination as! HistoryViewController
+            hist.array = billHistory
+        }
+    }//will run for any segue at this view controler
 }
 

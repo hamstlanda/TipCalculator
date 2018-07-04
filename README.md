@@ -2,34 +2,34 @@
 
 Submitted by: Liza Liutova
 
-Time spent: 3 hours spent in total
+Time spent: 5 hours spent in total
+
 ##User Stories
 
 The following required functionality is complete:
 
     *[ ] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+    
+The following optional feature is implemented:
 
-The following optional features are implemented:
-
-    *[ ] Settings page to change the default tip percentage.
-    *[ ] UI animations
-    *[ ] Remembering the bill amount across app restarts (if <10mins)
-    *[ ] Using locale-specific currency and currency thousands separators.
     *[ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following additional features are implemented:
 
-    -[ ] List anything else that you can get done to improve the app functionality!
+    *[ ] User can view history of their searches
 
 ##Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+<img src='blob:https://imgur.com/06a936e2-fdd3-445c-99a6-ff7f96c0e444' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
 ##Notes
 
 Describe any challenges encountered while building the app.
+
 ##License
 
 Copyright 2018 Liza Liutova
